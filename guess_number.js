@@ -18,7 +18,7 @@ function TextArea(){
         Judgenumber();
         count--;
         H2.textContent = "remaining"+ " " + count + " "+ "chances";  //h2標籤的內容更改
-        if(count == 0){
+        if(count == 0){ 
             H1.textContent = "Lose";  //h2標籤的內容更改
             EnterNumber.disabled = true; //按鈕設定不可使用
         };
