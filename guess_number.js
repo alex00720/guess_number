@@ -17,9 +17,9 @@ function TextArea(){
         num ++; 
         Judgenumber();
         count--;
-        H2.textContent = '只剩'+ count + '次機會';  //h2標籤的內容更改
+        H2.textContent = "remaining"+ " " + count + " "+ "chances";  //h2標籤的內容更改
         if(count == 0){
-            H2.textContent = '挑戰失敗';  //h2標籤的內容更改
+            H1.textContent = "Lose";  //h2標籤的內容更改
             EnterNumber.disabled = true; //按鈕設定不可使用
         };
     }
@@ -27,15 +27,15 @@ function TextArea(){
 
 function Judgenumber(){
    if(InputNumber.value == RandomNumber){
-    H1.textContent = '恭喜答對!!';
+    H1.textContent = "Win";
     EnterNumber.disabled = true;
    }
-   else if(InputNumber.value >= RandomNumber){
-    H1.textContent = '猜小一點';
+   else if(InputNumber.value > RandomNumber){
+    H1.textContent = 'so big';
    }
    else{
-    H1.textContent = '猜大一點';
+    H1.textContent = 'so small';
    }
 }
-
+H2.textContent = "remaining"+ " " + count + " "+ "chances"
 EnterNumber.addEventListener("click",TextArea);
